@@ -1,11 +1,12 @@
-def get_todos(filepath="/app/my-todo-app/venv/todos.txt"):
+FILEPATH = "todos.txt"
+def get_todos(filepath=FILEPATH):
     """ Read a text file and return the list of todos """
-    with open("/app/my-todo-app/venv/todos.txt", 'r') as file_local:
+    with open(FILEPATH, 'r') as file_local:
         todos_local = file_local.readlines()
     return todos_local
  
 
-def write_todos(todos_arg , filepath="/app/my-todo-app/venv/todos.txt"):
+def write_todos(todos_arg , filepath=FILEPATH):
     """ Write a text file """
-    with open("/app/my-todo-app/venv/todos.txt", 'w') as file_local:
+    with open(FILEPATH, 'w') as file_local:
         file_local.writelines(todos_arg)
